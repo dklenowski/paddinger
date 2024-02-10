@@ -18,5 +18,4 @@ command:
       flutter: ">=1.17.0"
     dependencies:
     dev_dependencies:
-      paddinger: ^1.2.0
       flutter_lints: ^3.0.1
