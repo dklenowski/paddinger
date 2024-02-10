@@ -36,13 +36,13 @@ String _addEndComment(String paddingName) {
 
 String _addAllPaddings(String paddingName, String constantName) {
   return '''
-const EdgeInsets ${paddingName}EdgeInets = const EdgeInsets.all($constantName);
+const EdgeInsets ${paddingName}EdgeInsets = const EdgeInsets.all($constantName);
 
 class ${paddingName}AllPadding extends Padding {
     const ${paddingName}AllPadding({Key? key, required Widget child})
       : super(
             key: key,
-            padding: ${paddingName}EdgeInets,
+            padding: ${paddingName}EdgeInsets,
             child: child);
 }
   ''';
