@@ -1,0 +1,4 @@
+# melos_managed_dependency_overrides: paddinger_annotations
+dependency_overrides:
+  paddinger_annotations:
+    path: ..\\paddinger_annotations

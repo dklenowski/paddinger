@@ -1,10 +1,22 @@
-name: paddinger
+name: paddinger_packages
+
+repository: https://github.com/dklenowski/paddinger.git
+
 packages:
   - packages/**
 
-dev_dependencies:
-  pedantic: 1.8.0
+command:
+  bootstrap:
+    # It seems so that running "pub get" in parallel has some issues (like
+    # https://github.com/dart-lang/pub/issues/3404). Disabling this feature
+    # makes the CI much more stable.
+    runPubGetInParallel: false
+    usePubspecOverrides: true
 
-environment:
-  sdk: ">=2.12.0 <3.0.0"
-  flutter: "2.0.4"
+    environment:
+      sdk: '>=3.2.6 <4.0.0'
+      flutter: ">=1.17.0"
+    dependencies:
+    dev_dependencies:
+      paddinger: ^1.2.0
+      flutter_lints: ^3.0.1
